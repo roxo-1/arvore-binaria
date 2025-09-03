@@ -12,7 +12,7 @@ public class Arvore{
                 if(valor<chave){
                     p=p.esquerda;
                 }else if(valor > chave){
-                    p=p.direita
+                    p=p.direita;
                 }else{
                     System.out.println("O valor já existe");
                     return;
@@ -28,9 +28,10 @@ public class Arvore{
 
     private void mostraInOrdem(){
         if (no != null) {
-        mostraInOrdem(no.left);
-        System.out.print(no.value + " "); 
-        mostraInOrdem(no.right);
+            mostraInOrdem(no.left);
+            System.out.print(no.value + " "); 
+            mostraInOrdem(no.right);
+        }
     }
     void mostrar(){
         mostraInOrdem();
