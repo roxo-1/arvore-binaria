@@ -83,7 +83,7 @@ public class Arvore{
     //versão iterativa
     public int contaNos(Arvore arvore){
         No p = raiz;
-        int qtd = 0;
+        int qtd;
         Stack<No> pilha = new Stack<>();
         if (raiz == null) {
             return 0;
@@ -91,11 +91,11 @@ public class Arvore{
         while(p!=null || !pilha.isEmpty()){
             while(p != null){
                 pilha.push(p);
+                qtd++;
                 p = p.esq;
             }
             p=pilha.pop();
-            qtd++;
-            p =p.dir;
+            p=p.dir;
         }
         return qtd;
     }
