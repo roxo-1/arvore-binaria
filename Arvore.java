@@ -111,11 +111,11 @@ public class Arvore{
             // desce até o nó mais à esquerda
             while(atual != null) {
                 pilha.push(atual);
-                contador++;
                 atual = atual.esquerda;
             }
             // pega o nó do topo da pilha
             atual = pilha.pop();
+            contador++;
             // se chegamos ao k-ésimo nó visitado
             if (contador == k) {
                 return atual.valor;
